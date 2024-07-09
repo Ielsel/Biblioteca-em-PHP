@@ -2,6 +2,6 @@
 	define('HOST', 'localhost');
 	define('USER', 'root');
 	define('PASS', '');
-	define('BASE', 'filmes123');
+	define('BASE', 'bdbiblioteca');
 
 	$conn = new MySQLi(HOST, USER, PASS, BASE);

@@ -6,7 +6,7 @@
 ?>
 <form action="?page=emprestimo-salvar" method="POST">
 	<input type="hidden" name="acao" value="editar">
-	<input type="hidden" name="livro_id_livro" value="<?php print $row_1->id_livro; ?>">
+	<input type="hidden" name="livro_id_livro" value="<?php print $row_1->livro_id_livro; ?>">
 	<div class="mb-3">
 		<label>Livro</label>
 		<select name="livro_id_livro" class="form-control">
@@ -30,7 +30,7 @@
 	</div>
 	<div class="mb-3">
 		<label>Usuário</label>
-		<select name="livro_id_livro" class="form-control">
+		<select name="usuario_id_usuario" class="form-control">
 			<option>-=Selecione=-</option>
 		<?php
 			$sql = "SELECT * FROM usuario";
@@ -51,7 +51,7 @@
 	</div>
 	<div class="mb-3">
 		<label>Atendente</label>
-		<select name="livro_id_livro" class="form-control">
+		<select name="atendente_id_atendente" class="form-control">
 			<option>-=Selecione=-</option>
 		<?php
 			$sql = "SELECT * FROM atendente";
@@ -72,11 +72,11 @@
 	</div>
 	<div class="mb-3">
 		<label>Data empréstimo:</label>
-		<input type="text" name="data_emprestimo" value="<?php print $row_1->data_emprestimo; ?>" class="form-control">
+		<input type="date" name="data_emprestimo" value="<?php print $row_1->data_emprestimo; ?>" class="form-control">
 	</div>
 	<div class="mb-3">
 		<label>Data devolução:</label>
-		<input type="text" name="data_devolucao" value="<?php print $row_1->data_devolucao; ?>" class="form-control">
+		<input type="date" name="data_devolucao" value="<?php print $row_1->data_devolucao; ?>" class="form-control">
 	</div>
 	<div class="mb-3">
 		<button class="btn btn-success" type="submit">Enviar</button>

@@ -13,7 +13,6 @@
 		print "<p>Encontrou <b>$qtd</b> resultado(s)</p>";
 		print "<table class='table table-bordered table-striped table-hover'>";
 		print "<tr>";
-		print "<th>#</th>";
 		print "<th>Livro</th>";
 		print "<th>Usuário</th>";
 		print "<th>Atendente</th>";
@@ -23,6 +22,9 @@
 		print "</tr>";
 		while($row = $res->fetch_object()){
 			print "<tr>";
+			print "<td>".$row->titulo_livro."</td>";
+			print "<td>".$row->nome_usuario."</td>";
+			print "<td>".$row->nome_atendente."</td>";
 			print "<td>".$row->data_emprestimo."</td>";
 			print "<td>".$row->data_devolucao."</td>";
 			print "<td>
